@@ -1,4 +1,8 @@
 user_prompt = True
+name = "name"
+age = 150
+month = 13
+
 name = input("What is your name?    ")
 
 while user_prompt:  # While loop to ask for user's age
