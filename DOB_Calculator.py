@@ -1,7 +1,10 @@
+import datetime
+
 user_prompt = True
 name = "name"
 age = 150
 month = 13
+current_date = datetime.datetime.now()
 
 name = input("What is your name?    ")
 
@@ -11,11 +14,11 @@ while user_prompt:  # While loop to ask for user's age
         while user_prompt:  # Second while loop to ask for user's month of birth
             month = int(input("What month were you born in (as a digit)?    "))
             if month <= 6 and month > 0:
-                year_of_birth = 2021 - int(age)
+                year_of_birth = current_date.year - int(age)
                 print(f"OMG {name.capitalize()}, you are {age} years old so you were born in {year_of_birth}")
                 user_prompt = False
             elif month > 6 and month <= 12:
-                year_of_birth = 2021 - int(age) - 1
+                year_of_birth = current_date.year - int(age) - 1
                 print(f"OMG {name.capitalize()}, you are {age} years old so you were born in {year_of_birth}")
                 user_prompt = False
             elif age == "exit":
